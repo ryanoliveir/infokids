@@ -1,0 +1,75 @@
+body, html{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background-color: #4c00ff;
+}
+
+section{
+    background-color: white;
+    color: #3401ac;
+    width: 400px;
+    height: 450px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 22px;
+    margin: auto;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 2px 2px 2px black;
+
+}
+
+button{
+    background-color: white;
+    color: #4c00ff;
+    font-family: 'Amatic SC', cursive;
+    border: 3px solid #4c00ff;
+    border-radius: 10px;
+    font-size: 17px;
+    height: 40px;
+    width: 150px;
+    transition-duration: .3s ;
+    outline: none;
+}
+
+.acesso{
+    padding-top: 50px;
+}
+button:hover{
+    background-color: #4c00ff;
+    color: white;
+    box-shadow: 0 6px #3401ac;
+}
+
+button:active{
+    background-color: #3401ac;
+    border-color: #3401ac;
+    box-shadow: none;
+    position: relative;
+    top: 4px;
+    
+}
+.email, .senha{
+    padding: 10px;
+}
+
+.input_one, .input_two{
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    transition-duration: 0.3s;
+    border: 0;
+    
+}
+
+.input_one:focus, .input_two:focus{
+    outline: 0;
+    border: 2px solid #4c00ff;
+}
+
+
+input{
+    text-align: center;
+}
