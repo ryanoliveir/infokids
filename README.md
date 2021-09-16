@@ -1,22 +1,3 @@
-```
-function get_data() {
-    var email = $("#one").val()
-    var senha = $("#two").val()
+# Repostiório do projeto INFOKIDS
 
-
-
-
-    const send = {"email": email, "pass": senha}
-
-    
-
-    $.ajax({
-        method: "POST",
-        url: "/clients",
-        data: send,
-    }).done(function(data) {
-        console.log(data)
-    })
-
-}
-```
+Este projeto tem como finalidade criar um plataforma de auxílio ao ensino
