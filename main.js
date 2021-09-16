@@ -5,11 +5,11 @@ const dirname = __dirname
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use(express.static(dirname + '/public'))
+app.use(express.static(dirname + "/public"))
 
 
 app.get('/login', function(req, res) {
-    res.sendFile(dirname + '/public/main.html')
+    res.sendFile(dirname + '/public/pages/login_page/login.html')
 
 })
     

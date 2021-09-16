@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@500&display=swap');
+
+body{
+    background-image: url('/assets/css/images/image2.png');
+    background-attachment: fixed;
+    background-size: 100% 100.70%;
+    background-repeat: no-repeat;
+    position: fixed;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+.container-sm,p,form,h1,#esqueceu{
+    font-family: 'Mali', cursive;
+    font-style: bold;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    top: 20%;
+    
+}
+h1{
+    background-color: chartreuse;
+    border-radius: 45px;
+    height: 60px;
+}
+#logo{
+    width:70px;
+    flex-direction: row;
+    justify-content: left;
+    position: relative;
+    right: 40%;
+    margin: 0;
+    display: flex;
+
+
+    
+}
+p{
+    font-family: 'Mali', cursive;
+    color: #FFFFFF;
+    -webkit-text-stroke-width: 0.5px; /* largura da borda */
+    -webkit-text-stroke-color: #000; /* cor da borda */
+
+}
+#esqueceu{
+    color:white;
+    -webkit-text-stroke-width: 0.8px; /* largura da borda */
+    -webkit-text-stroke-color: red; /* cor da borda */
+
+}

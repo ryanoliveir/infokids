@@ -1,3 +1,4 @@
+```
 function get_data() {
     var email = $("#one").val()
     var senha = $("#two").val()
@@ -18,4 +19,4 @@ function get_data() {
     })
 
 }
-
+```
