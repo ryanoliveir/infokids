@@ -25,21 +25,27 @@
 
 <body>
     <div class='container-sm'>
-        <img src="/assets/css/images/logonav.png" alt="InfoKids" id='logo'>
         <div class='box'>
+            <img src="https://i.ibb.co/nc1BzSj/logotipo-inf.png" alt="InfoKids" id='logo'>
+            <img src="https://i.ibb.co/TK2vBLC/iflogo.png" alt="InfoKids" id='logo2'>
             <h1>LOGIN</h1>
             <p>Para a diversão começar, insira seu e-mail e sua senha!</p>
             <form>
-                <input type="email" required placeholder="E-MAIL" id="email" autocomplete="off" /><br>
-                <input type="password" required placeholder="SENHA" id="senha" autocomplete="off"><br>
-                <button type="button" id='botao1'>Enviar</button>
+                <div class='row'>
+                    
+                <p class= 'holder'>EMAIL: </p> <input type="email" required placeholder="E-MAIL" id="email" autocomplete="off" />   
+            </div>
+            <div class='row'>
+                <p class= 'holder'>SENHA: </p> <input type="password" required placeholder="SENHA" id="senha" autocomplete="off">
+            </div>
+                <button type="button" id='botao1' >ENTRAR</button>
             </form>
-            <a href="" id='esqueceu'>Esqueceu a senha?</a>
+            <a href="" id='esqueceu'>ESQUECEU A SENHA?</a>
         </div>
 
     </div>
 
 </body>
-<script src='/public/assets/js/login_scripts.js'></script>
+<script src='/assets/js/login_scripts.js'></script>
 
 </html>

@@ -3,8 +3,8 @@ let botaoEnviar = document.querySelector('#botao1')
 botaoEnviar.addEventListener('click', Enviar)
 let lista = document.createElement('ul')
 body.append(lista)
-let arrayEmail = ['mikapetronilho@gmail.com','juliarodrigues@gmail.com']
-let arraySenha = ['mikita@2003','julita@2002']
+// let arrayEmail = ['mikapetronilho@gmail.com','juliarodrigues@gmail.com']
+// let arraySenha = ['mikita@2003','julita@2002']
 
 let sendToServer = (email, pass) => {
     const send = {"email": email, "pass": pass}
@@ -22,27 +22,27 @@ function Enviar(){
     let valorEmail = document.querySelector('#email').value
     let valorSenha = document.querySelector('#senha').value
     var i = 0;
-    var w = 0;
+    // var w = 0;
 
     if(valorEmail == '' || valorSenha == ''){
         
     }
     else{
-        while(w <= arrayEmail.length){
-            if(valorEmail === arrayEmail[w] && valorSenha === arraySenha[w]){
+        // while(w <= arrayEmail.length){
+        //     if(valorEmail === arrayEmail[w] && valorSenha === arraySenha[w]){
                 var condiz = true;
-                console.log('é igual')
+                // console.log('é igual')
                 //console.log(arrayEmail[w])
                 while(i <= valorEmail.length){
                     //console.log(arrayEmail[w][i])
-                    if(arrayEmail[w][i] === '@' && arrayEmail[w][i] === arrayEmail[w][i].toLowerCase()){
+                    if(valorEmail[i] === '@' && valorEmail[i] === valorEmail[i].toLowerCase()){
                         var condiz2 = true;
                     }
                     i++
                 }
-                }
-                w++
-            }
+                // }
+                // w++
+            // }
         
         }
         if(condiz === true && condiz2 === true){
@@ -54,6 +54,14 @@ function Enviar(){
         }
         else{
             alert('Por favor, preencha os dados de forma válida')
+            var input1 = document.querySelector('#email')
+            input1.style.borderColor = 'red'; 
+            input2 = document.querySelector('#senha')
+            input2.style.borderColor = 'red'; 
+            setTimeout(function(){ 
+                input1.style.borderColor = ''; 
+                input2.style.borderColor = ''; 
+            }, 1500);
             
         }
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mali:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@600&display=swap');
 
 body{
     background-image: url('/assets/css/images/image2.png');
@@ -10,11 +10,12 @@ body{
     height: 100%;
     width: 100%;
 }
-.container-sm,p,form,h1,#esqueceu{
+.container-sm,p,h1,form,#esqueceu{
     font-family: 'Mali', cursive;
-    font-style: bold;
     width: auto;
     height: auto;
+    margin-right: auto;
+    margin-left: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -25,31 +26,88 @@ body{
 }
 h1{
     background-color: chartreuse;
+    font: black;
     border-radius: 45px;
     height: 60px;
+    width: 300px;
 }
 #logo{
-    width:70px;
-    flex-direction: row;
-    justify-content: left;
-    position: relative;
+    width:90px;
+    box-sizing: 50px;
     right: 40%;
+    margin-top: 0px;
     margin: 0;
-    display: flex;
+    float: left;
+    position: relative;
+    right: 300px;
 
 
     
 }
+#logo2{
+    width:60px;
+    box-sizing: 50px;
+    right: 40%;
+    margin-top: 0px;
+    margin: 0;
+    box-sizing: 50px;
+    float: right;
+    position: relative;
+    left: 300px;
+}
 p{
     font-family: 'Mali', cursive;
+    justify-content: center;
     color: #FFFFFF;
     -webkit-text-stroke-width: 0.5px; /* largura da borda */
     -webkit-text-stroke-color: #000; /* cor da borda */
+    margin-top: 5%;
 
 }
 #esqueceu{
     color:white;
     -webkit-text-stroke-width: 0.8px; /* largura da borda */
     -webkit-text-stroke-color: red; /* cor da borda */
+    margin-top: 40px;
 
 }
+.row{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    position: relative;
+}
+.holder{
+    margin: 0;
+    font-size: 30px;
+    padding-right: 8px;
+    -webkit-text-stroke-width: 1.1px; /* largura da borda */
+    -webkit-text-stroke-color: #000; /* cor da borda */
+}
+#botao1{
+    margin-top: 15px;
+    outline: none;
+    background: rgb(61, 141, 216);
+    border-color: rgb(47, 84, 153);
+    border-radius: 5px;
+    color: white ;
+}
+#email,#senha{
+    outline: none;
+}
+#senha:hover {
+    background-color: #fcff61;
+  }
+  #email:hover {
+    background-color: #fcff61;
+  }
+  #botao1:hover{
+      color: black;
+      text-shadow: 0.1em 0.1em 0.2em black
+  }
+  #esqueceu:hover{
+    text-shadow: 0.1em 0.1em 0.2em black
+  }
