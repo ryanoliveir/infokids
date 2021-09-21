@@ -1,18 +1,25 @@
 const express = require('express')
+const database = require('./services/database/queries')
 const app = express()
+
 
 const dirname = __dirname
 
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
-app.use(express.static(dirname + '/public'))
 
+
+app.use(express.json())
+
+app.use(express.urlencoded({ 
+    extended: true 
+    }
+))
+app.use(express.static(dirname + '/public'))
 
 app.get('/login', function(req, res) {
     res.sendFile(dirname + '/public/pages/login_page/login.html')
 
 })
-    
+
 
 app.post("/clients", function(req, res){
     async function getData(res){
@@ -26,6 +33,10 @@ app.post("/clients", function(req, res){
 
     getData(req.body)
 })
+
+app.get('/db', database.connetionVerify)
+app.get('/users', database.getUsers)
+app.get('/users/:id', database.getUser)
 
 app.listen(3000, function() {
     console.log("Listening on http://localhost:3000\n")
