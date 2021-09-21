@@ -46,11 +46,11 @@ function Enviar(){
         
         }
         if(condiz === true && condiz2 === true){
-            let marker = document.createElement('li')
-            lista.append(marker)
+            //let marker = document.createElement('li')
+            //lista.append(marker)
             //console.log(valorEmail, valorSenha)
             sendToServer(valorEmail, valorSenha)
-            marker.innerText = 'email: '+valorEmail+' senha: '+valorSenha
+            //marker.innerText = 'email: '+valorEmail+' senha: '+valorSenha
         }
         else{
             alert('Por favor, preencha os dados de forma válida')
