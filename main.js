@@ -36,7 +36,8 @@ app.post("/clients", function(req, res){
 
 app.get('/db', database.connetionVerify)
 app.get('/users', database.getUsers)
-app.get('/users/:id', database.getUser)
+app.get('/users/:primaryKey', database.getUser)
+app.post('/users/register', database.registerUser)
 
 app.listen(3000, function() {
     console.log("Listening on http://localhost:3000\n")

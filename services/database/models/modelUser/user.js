@@ -16,6 +16,6 @@ const User = database.define("usuarios",{
         type: Sequelize.STRING(255),
     },
     
-})
+});
 
 module.exports = User;

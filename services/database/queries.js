@@ -1,15 +1,18 @@
 const database = require('./db');
+const User = require('./models/modelUser/user');
 const modelUser = require('./models/modelUser/user')
 
+const bcrypt = require('bcryptjs');
 
-const connetionVerify = async function (){
+
+const connetionVerify = async function (resquest, response) {
     try{
         await database.authenticate();
-        console.log('Connection successful!!!')       
-        return
+        await database.sync(); 
+        response.json({'message': "Connection successful!!!"}); 
     }catch(err){
         console.error("Connetion database error", err);
-        return;
+        response.json({'message': "Connection Failed!!!"});
     }
 
 }
@@ -26,9 +29,23 @@ const getUser = async function(request, response){
 }
 
 
+
+// POST
+
+const registerUser = async function(request, response){
+    let passHash = await bcrypt.hash(String(request.body.senha), 10);
+    User.create({
+        email: request.body.email,
+        senha: passHash,
+    })
+
+    response.json({'message': 'Register ok', 'hash':`${passHash}`});
+}
+
+
 module.exports = {
     connetionVerify,
     getUsers,
     getUser,
-
+    registerUser,
 }
