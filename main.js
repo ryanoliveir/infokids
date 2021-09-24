@@ -20,6 +20,9 @@ app.get('/login', function(req, res) {
 
 })
 
+app.get('/register', function(req, res) {
+    res.sendFile(dirname + '/public/pages/registration_page/register.html')
+})
 
 app.post("/clients", function(req, res){
     async function getData(res){
@@ -40,5 +43,5 @@ app.get('/users/:primaryKey', database.getUser)
 app.post('/users/register', database.registerUser)
 
 app.listen(3000, function() {
-    console.log("Listening on http://localhost:3000\n")
+    console.log("Listening on http://localhost:3000 \n")
 })
