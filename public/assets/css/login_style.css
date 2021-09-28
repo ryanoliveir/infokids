@@ -119,8 +119,9 @@ p{
   }
   #botao1:hover{
       color: black;
-      text-shadow: 0.1em 0.1em 0.2em black
+      text-shadow: 0.1em 0.1em 0.2em black;
   }
   #esqueceu:hover{
     text-shadow: 0.1em 0.1em 0.2em black /*sombrinha preta*/
   }
+

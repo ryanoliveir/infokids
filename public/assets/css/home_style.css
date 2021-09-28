@@ -11,7 +11,8 @@ body{
     height: 100%; /*altura 100*/
     width: 100%; /*largura 100*/
 }
-@media screen and (min-width: 800px){
+@media screen and (min-width: 800px)
+{
     .container{
     width: auto;
     height: auto;
@@ -65,12 +66,24 @@ body{
     }
     .bts1:hover{
         background-color: rgb(80, 160, 0);
+        cursor: pointer;
+        border-style:dotted;
+        border-color: yellow;
+        border-width: 2px;
     }
     #ap:hover{
         background-color: #2a9ba3;
+        cursor: pointer;
+        border-style:dotted;
+        border-color: yellow;
+        border-width: 2px;
     }
     #sms:hover{
         background: #b16464;
+        cursor: pointer;
+        border-style:dotted;
+        border-color: yellow;
+        border-width: 2px;
     }
     #ap{
         font-family: 'Roboto', sans-serif;
@@ -129,4 +142,5 @@ body{
         align-items: center;
 
     }
+    
 }
