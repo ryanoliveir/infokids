@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@600&display=swap');/*importa a fonte Mali do google*/
+
+body{
+    background-image: url('/public/assets/css/images/image2.png'); /*o fundo*/
+    background-attachment: fixed;
+    background-size: 100% 100.70%; /*ajusta o fundo*/
+    background-repeat: no-repeat; /*não deixa ele estampado*/
+    position: fixed; /*deixa fixo*/
+    margin: 0px;
+    font-family: 'Mali', cursive;
+    height: 100%; /*altura 100*/
+    width: 100%; /*largura 100*/
+}
+
+@media screen and (min-width: 700px){ /*ajusta pra responsivo quando menor que 700px de largura*/
+.container{ /*propriedade para o elemento pai container*/
+    display: flex;
+    justify-content: center; /*todos os itens no centro*/
+    align-items: center; /* o conteúdo dos itens no centro também*/
+    flex-direction: row; /*dispõe a caixa para o formato linha, já que queremos os elementos um ao lado do outro*/
+    }
+}
+
+.col1{ /*elementos do canto esquerdo*/
+    display: flex; /*flexiona os elementos*/
+    flex-direction: column; /*dispõe os inputs do grupo col1 para que fiquem um de baixo do outro*/
+    position: relative; /*posicionamento relativo, para mover os itens*/
+    margin-right: 100px; /*margem à direita de 100px para espaçar da col2*/
+    color:white;
+    -webkit-text-stroke-width: 0.5px; /* largura da borda */
+    -webkit-text-stroke-color: #000; /* cor da borda */
+    width: auto;
+    height: auto;
+}
+
+.col2{ /*elementos do canto direito*/
+    flex-direction: column;
+    position: relative;
+    color:white;
+    -webkit-text-stroke-width: 0.5px; /* largura da borda */
+    -webkit-text-stroke-color: #000; /* cor da borda */
+    
+}
+
+.container2{ /*container do botao: o botão é um elemento em linha, com esse container, ele fica disposto em bloco*/
+    display: flex; /*torna a caixa do botão flexível*/
+    align-items: center;
+    flex-direction: column; /*em coluna, por temos apenas ele entre as duas colunas que criamos*/
+    position: relative;
+    margin-top: 50px; /*uma margem para espaçar das colunas*/
+}
+
+form{ /*form em linha para ficar uma coluna do lado da outra*/
+    display: flex;
+    flex-direction: row; /*em coluna, por temos apenas ele entre as duas colunas que criamos*/
+    position: relative;
+    align-items: center;/*todo mundo centralizado*/
+    justify-content: center;
+}
+
+h1{
+    margin-top: 12%; /*espaço entre o título CADASTRO e o topo*/
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    background-color: chartreuse;
+    font: black;
+    position: relative;
+    border-radius: 45px;
+    height: 60px;
+    width: 300px;
+}
+
+.botao{
+    margin-top: 15px;
+    outline: none;
+    background: rgb(61, 141, 216);
+    border-color: rgb(47, 84, 153);
+    border-radius: 5px;
+    color: white ;
+}
+
+.botao{
+    margin-top: 15px;
+    outline: none;
+    background: rgb(61, 141, 216);
+    border-color: rgb(47, 84, 153);
+    border-radius: 5px;
+    color: white ;
+}
