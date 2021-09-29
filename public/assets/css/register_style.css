@@ -18,6 +18,7 @@ body{
     justify-content: center; /*todos os itens no centro*/
     align-items: center; /* o conteúdo dos itens no centro também*/
     flex-direction: row; /*dispõe a caixa para o formato linha, já que queremos os elementos um ao lado do outro*/
+    margin-top: 6%; /*uma margem para espaçar das colunas*/
     }
 }
 
@@ -47,7 +48,7 @@ body{
     align-items: center;
     flex-direction: column; /*em coluna, por temos apenas ele entre as duas colunas que criamos*/
     position: relative;
-    margin-top: 50px; /*uma margem para espaçar das colunas*/
+    margin-top: 60px; /*uma margem para espaçar das colunas*/
 }
 
 form{ /*form em linha para ficar uma coluna do lado da outra*/
@@ -59,7 +60,7 @@ form{ /*form em linha para ficar uma coluna do lado da outra*/
 }
 
 h1{
-    margin-top: 12%; /*espaço entre o título CADASTRO e o topo*/
+    margin-top: 5%; /*espaço entre o título CADASTRO e o topo*/
     display: flex; 
     flex-direction: column; 
     align-items: center;
@@ -81,11 +82,15 @@ h1{
     color: white ;
 }
 
-.botao{
-    margin-top: 15px;
-    outline: none;
-    background: rgb(61, 141, 216);
-    border-color: rgb(47, 84, 153);
-    border-radius: 5px;
-    color: white ;
+.nome, .email, .senha, .conf, .resp, .data, .label1, .label2, .anoE, .botao {
+    Width: 250px;
+    Height: 30px;
+}
+
+.radio1, .radio2 {
+    position: relative;
+    Width: 90px;
+    Height: 20px;
+    left: -10%;
+    
 }

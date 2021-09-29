@@ -30,6 +30,7 @@ while(i < 6){ //laço de repetição enquanto i for menor que 7
     if(arrayInput[i] == arrayInput[0]){//condição: se o meu elemento input na posição [i] do meu array, corresponder ao elemento input na posição [0] do array, ele executará os seguinte escopo:
         campo.setAttribute('type','text') //muda o atributo do input da posição 0 do meu array, para tipo texto
         campo.setAttribute('placeholder','Nome')//coloca um 'escrito' dentro do input
+        campo.setAttribute('class', 'nome')
         campo.setAttribute('id','entrada0')//atribui um id='entrada0'
         var caixas = document.createElement('div')//cria um div
         div1.append(caixas)//col1 recebe esse div dentro dele
@@ -40,6 +41,7 @@ while(i < 6){ //laço de repetição enquanto i for menor que 7
     if(arrayInput[i] == arrayInput[1]){
         campo.setAttribute('type','email') //muda o atributo do input da posição 0 do meu array, para tipo email
         campo.setAttribute('placeholder','Email') //coloca um 'escrito' dentro do input
+        campo.setAttribute('class', 'email')
         campo.setAttribute('id','entrada1')//atribui um id='entrada1'
         var caixas = document.createElement('div')//mesma coisa aqui, a gente vai criando divs
         div1.append(caixas)
@@ -50,6 +52,7 @@ while(i < 6){ //laço de repetição enquanto i for menor que 7
     if(arrayInput[i] == arrayInput[2]){
       campo.setAttribute('type','password') //muda o atributo do input da posição 0 do meu array, para tipo senha
       campo.setAttribute('placeholder','Senha') //coloca um 'escrito' dentro do input
+      campo.setAttribute('class', 'senha')
       campo.setAttribute('id','entrada2')//atribui um id='entrada2'
       var caixas = document.createElement('div')
         div1.append(caixas)
@@ -60,6 +63,7 @@ while(i < 6){ //laço de repetição enquanto i for menor que 7
     if(arrayInput[i] == arrayInput[3]){
       campo.setAttribute('type','password') //muda o atributo do input da posição 0 do meu array, para tipo senha
       campo.setAttribute('placeholder','Confirmação de senha') //coloca um 'escrito' dentro do input
+      campo.setAttribute('class', 'conf')
       campo.setAttribute('id','entrada3')//atribui um id='entrada3'
       var caixas = document.createElement('div')
           div1.append(caixas)
@@ -70,6 +74,7 @@ while(i < 6){ //laço de repetição enquanto i for menor que 7
     if(arrayInput[i] == arrayInput[4]){
       campo.setAttribute('type','text') //muda o atributo do input da posição 0 do meu array, para tipo text
       campo.setAttribute('placeholder','Nome do responsável') //coloca um 'escrito' dentro do input
+      campo.setAttribute('class', 'resp')
       campo.setAttribute('id','entrada4')//atribui um id='entrada4'
       var caixas = document.createElement('div')
         div1.append(caixas)
@@ -80,6 +85,7 @@ while(i < 6){ //laço de repetição enquanto i for menor que 7
     if(arrayInput[i] == arrayInput[5]){
         campo.setAttribute('type','date') //muda o atributo do input da posição 0 do meu array, para tipo data
         campo.setAttribute('id','entrada5')//atribui um id='entrada5'
+        campo.setAttribute('class', 'data')
         var caixas = document.createElement('div')
         div2.append(caixas) //ATENÇÃO: esse é o div DOIS, nós criamos ele lá em cima pra ficar assim no html: body>container-sm>form>(col1 e col2)
         caixas.setAttribute('class','holder'+i)
@@ -98,24 +104,29 @@ var radio1 = document.createElement('input')
 radio1.setAttribute('type','radio')
 radio1.setAttribute('value','Sim')
 radio1.setAttribute('id','entrada6')
+radio1.setAttribute('class','radio1')
 radio1.setAttribute('name','alfabetizado')
 entrada.append(radio1)
 
 var label1 = document.createElement('label')
 label1.innerHTML = 'Sim'
 label1.setAttribute('for','sim')
+label1.setAttribute('class', 'label1')
 entrada.append(label1)
 
 var radio2 = document.createElement('input')
 radio2.setAttribute('type','radio')
 radio2.setAttribute('value','Não')
 radio2.setAttribute('id','entrada6')
+radio2.setAttribute('class','radio2')
+
 radio2.setAttribute('name','alfabetizado')
 entrada.append(radio2)
 
 var label2 = document.createElement('label')
 label2.innerHTML = 'Não'
 label2.setAttribute('for','não')
+label2.setAttribute('class', 'label2')
 entrada.append(label2)
 
 var anoEscolar = document.createElement('select')
@@ -128,6 +139,7 @@ var opcaoEscolar = document.createElement('option')
 opcaoEscolar.innerHTML = 'Ano escolar'
 anoEscolar.append(opcaoEscolar)
 anoEscolar.setAttribute('id','entrada7')
+anoEscolar.setAttribute('class','anoE')
 anoEscolar.after(quebra)
 anoEscolar.before(quebra)
 arrayInput.push(anoEscolar)

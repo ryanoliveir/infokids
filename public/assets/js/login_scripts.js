@@ -7,12 +7,15 @@ body.append(lista)
 // let arraySenha = ['mikita@2003','julita@2002']
 
 let sendToServer = (email, pass) => {
-    const send = {"email": email, "pass": pass}
+    //const send = {"email": email, "password": pass}
 
     $.ajax({
         method: 'POST',
-        url: "/clients",
-        data: send,
+        url: "/auth/authenticate",
+        data: {
+            email: email,
+            password: pass,
+        },
     }).done(function (data) {
         console.log(data)
     })
