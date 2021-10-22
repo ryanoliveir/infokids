@@ -179,6 +179,25 @@ botao.addEventListener('click', Cadastrar)//adiciona um evento do tipo 'click' n
 var pattern = "[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+$" //guarda um padrão de caracteres em uma variável
 var pattern2 = "/^([a-zA-Z][^<>\"!@[\]#$%¨&*()~^:;ç,\-´`=+{}º\|/\\?]{1,})@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/"
 
+let sendToServer = (valores) =>{ 
+  
+  const data = {name:valores[0], email:valores[1], password:valores[2], nome_responsavel:valores[4],nascimento:valores[5],albateziado:valores[6], ano_escolar:valores[7]}
+
+  const dadosAluno = JSON.stringify(data)
+  console.log(dadosAluno);
+
+  $.ajax({
+    method: 'POST',
+    url: "/clients",
+    data: data
+  }).done(function(data){
+    console.log(data);
+  })
+
+
+} 
+
+
 function Cadastrar(){ //criação da função Cadastrar
   let i = 0 //variável LOCAL i, diferente da nossa variável global, também i. Só funciona dentro desse escopo {} de função.
   let w = 0;
@@ -195,29 +214,31 @@ function Cadastrar(){ //criação da função Cadastrar
   }//fim do laço while
   if(arrayValores[0].match(pattern) && arrayValores[0][0].match(pattern) && arrayValores[0] != ''){//verifica se dentro do meu array de valores, na posição [0] (nome digitado), está de acordo com o padrão de caracteres que guardamos na pattern
     //e verifica também, se a letra inicial do nosso nome (posição [0] da posição [0]), está de acordo com o padrão.
-    console.log('Isso é de fato um nome válido')//imprime só para testarmos, se essa verificação foi feita.
+    //console.log('Isso é de fato um nome válido')//imprime só para testarmos, se essa verificação foi feita.
   }//fim do IF match
   if(arrayValores[2] === arrayValores[3] && arrayValores[2] != '' && arrayValores[3] != ''){
-    console.log('as senhas se confirmam')
+    //console.log('as senhas se confirmam')
   }
   if(arrayValores[4].match(pattern) && arrayValores[4][0].match(pattern) && arrayValores[4] != ''){
-    console.log('Nome do responsável é válido')
+    //console.log('Nome do responsável é válido')
   }
   if(arrayValores[7] != 'Ano escolar'){
-    console.log('Ano válido')
+    //console.log('Ano válido')
   }
 
   if(arrayValores[1] == '' || arrayValores[1][0] == ''){
   }
   else{
         while(w <= arrayValores[1].length){
-            console.log(arrayValores[1][w])
+            //console.log(arrayValores[1][w])
             if(arrayValores[1][w] === '@' && arrayValores[1][0] != '@' && arrayValores[1][w] != ''){
                 console.log('é um email')
             }
             w++
     }
   }
+  
+  sendToServer(arrayValores)
 }//fim da função Cadastrar
 //colocarmos um limite de caracteres para o cadastro de senha, pois não pode ser muito grande;
 //adicionarmos ALERTS (janelas de aviso) para caso os dados estejam inválidos ou válidos, informando o usuário.

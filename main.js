@@ -29,11 +29,19 @@ app.get('/home', function(req, res) {
 })
 
 
+
 app.get('/db', database.connetionVerify)
 app.get('/users', database.getUsers)
 app.get('/users/:primaryKey', database.getUser)
 
 app.post('/users/register', database.registerUser)
+
+
+app.post('/clients', function(req,res){
+    console.log(req.body)
+
+    res.json({message: "ok"})
+})
 
 app.listen(3000, function() {
     console.log("Listening on http://localhost:3000 \n")

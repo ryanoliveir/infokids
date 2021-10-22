@@ -1,5 +1,5 @@
 const database = require('./db');
-const User = require('./models/modelUser/user');
+const modelAluno = require('./models/modelAluno/aluno')
 const modelUser = require('./models/modelUser/user')
 
 const bcrypt = require('bcryptjs');
@@ -27,7 +27,6 @@ const getUser = async function(request, response){
     const user = await modelUser.findByPk(primaryKey);
     response.json(user);
 }
-
 
 
 // POST
