@@ -28,6 +28,10 @@ app.get('/home', function(req, res) {
     res.sendFile(dirname + '/public/pages/home_page/home.html')
 })
 
+app.get('/menu', function(req, res,){
+    res.sendFile(dirname + '/public/pages/menu_page/menu_page.html')
+})
+
 
 
 app.get('/db', database.connetionVerify)
