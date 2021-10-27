@@ -1,7 +1,8 @@
 const router = require('express').Router()
 const modelUser = require('../database/models/modelUser/user')
 const bcrypt = require('bcryptjs');
-
+const jwt = require('jsonwebtoken')
+const secret = "dawjd123"
 
 router.post('/authenticate', async (req, res) => {
     const { email, password } = req.body
@@ -17,9 +18,11 @@ router.post('/authenticate', async (req, res) => {
         return res.send({ error: "Invalid password"})
     }
 
+    const token = jwt.sign({user: user.id_usuario}, secret, {expiresIn: 300})
     user.senha = undefined;
 
-    res.send({ user })
+    
+    res.send({ user: user, token: token })
 
 })
 

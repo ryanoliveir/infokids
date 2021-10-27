@@ -181,14 +181,14 @@ var pattern2 = "/^([a-zA-Z][^<>\"!@[\]#$%¨&*()~^:;ç,\-´`=+{}º\|/\\?]{1,})@((
 
 let sendToServer = (valores) =>{ 
   
-  const data = {name:valores[0], email:valores[1], password:valores[2], nome_responsavel:valores[4],nascimento:valores[5],albateziado:valores[6], ano_escolar:valores[7]}
+  const data = {name:valores[0], email:valores[1], password:valores[2], nome_responsavel:valores[4],nascimento:valores[5],alfabetizado:valores[6], ano_escolar:valores[7]}
 
   const dadosAluno = JSON.stringify(data)
   console.log(dadosAluno);
 
   $.ajax({
     method: 'POST',
-    url: "/clients",
+    url: "/register/",
     data: data
   }).done(function(data){
     console.log(data);
@@ -203,7 +203,7 @@ function Cadastrar(){ //criação da função Cadastrar
   let w = 0;
   var arrayValores = [] //array de valores do tipo global e vazio
   
-  while(i < 7){ //laço de repetição WHILE (enquanto i for menor que 7)
+  while(i <= 7){ //laço de repetição WHILE (enquanto i for menor que 7)
       var valor = document.querySelector('#entrada'+i).value //seleção dos meus inputs através do ID deles, concatenando com o valor de i (entrada1, entrada2...)
       arrayValores.push(valor)//array de valores recebe o valor digitado (e selecionado antes) digitado nos nossos inputs
       if(arrayValores[i] ==  arrayValores[6]){

@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const database = require('../../db');
 
-const Aluno = database.define("aluno",{
+const Aluno = database.define("alunos",{
     id_aluno: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -24,7 +24,7 @@ const Aluno = database.define("aluno",{
         type: Sequelize.ENUM('S','N')
     }
 }, {
-    tableName: 'aluno'
+    tableName: 'alunos'
 }
 
 );
