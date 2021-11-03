@@ -16,9 +16,12 @@ let sendToServer = (email, pass) => {
             email: email,
             password: pass,
         },
-    }).done(function (data) {
-        console.log(data)
-    })
+        
+        }).done(function(data) {
+            location.href = 'http://localhost:3000/auth/menu'
+        
+            
+    });   
 }
 
 function Enviar(){

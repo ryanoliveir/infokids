@@ -16,7 +16,7 @@ app.use(express.urlencoded({extended: true }))
 app.use(express.static(dirname + '/public'))
 
 require('./services/controllers/authController')(app)
-require('./services/controllers/registerController')(app)
+require('./services/controllers/registerController',)(app)
 
 app.get('/login', function(req, res) {
     res.sendFile(dirname + '/public/pages/login_page/login.html')
@@ -28,10 +28,6 @@ app.get('/cadastro', function(req, res) {
 
 app.get('/home', function(req, res) {
     res.sendFile(dirname + '/public/pages/home_page/home.html')
-})
-
-app.get('/menu', authorization, function(req, res,){
-    res.sendFile(dirname + '/public/pages/menu_page/menu_page.html')
 })
 
 app.get('/leitura', function(req, res){
