@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/assets/css/peter_pan_style.css">
+    <title>PETER PAN</title>
+</head>
+<body>
+  
+    <div class='cabeçalho'>
+    <img src="/public/assets/css/images/logo_ajuste.png" alt="logo_ajuste" id='logo'>
+   
+    <h1>PETER PAN</h1>
+    
+    <button><b>MEU PERFIL</b></button>
+    </div>
+    <div class='corpo'>
+      <p id='leitura'><strong>LEREMOS PARA VOCÊ AQUI:</strong><br></p>
+      <div class=linha>
+        <div class=seletor>
+        <p id=mao>👉</p><audio controls>
+        <source src="chapeu.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+      </audio>
+    </div>
+      <div class='botoes'>
+      <button id=ajudar>MUDAR TAMANHO</button>
+      <button id=menu>VOLTAR AO MENU</button>
+    </div>
+    </div>
+    <div class='imagem'><img src="https://cdn.pixabay.com/photo/2012/04/13/01/19/peter-pan-31644_960_720.png" alt="Cinderela" id=cinder></div>
+      <p> <strong id=texto>
+
+        <br>
+        Peter Pan vive junto com sua fadinha chamada Sininho lá na Terra do Nunca.<br><br>
+
+        Uma vez, Peter saiu da Terra do Nunca para voar por aí e começou a escutar uma voz doce,
+         a voz de uma menina que, contava uma história. Ele curioso, foi até a janela dessa menina e se apaixonou a primeira vista!<br><br>
+
+        A menina linda se chamava Wendy, tinha cabelos castanho claro e olhos azuis. 
+        Ela tinha dois irmãos: João e Miguel. Peter se apresentou a eles e os convidou para dar uma volta. 
+        Os irmãos de Wendy não queriam ir, mas a irmã estava tão fascinada com aquilo tudo que foram para acompanhá-la.<br><br>
+
+
+        
+        E eles foram voando de mãos dadas com Peter Pan e encantados com aquilo tudo que estava acontecendo 
+        e não acreditando que eles estavam voando. Já para Peter, isso era a coisa mais normal do mundo.<br><br>
+
+        Wendy e seus irmãos conheceram a aldeia dos índios, avistaram o barco pirata e viram os meninos perdidos. <br><br>
+        Tudo isso de lá de cima.
+
+        De repente, Capitão Gancho avista Peter Pan e seus novos amigos e manda canhões em direção a eles.
+        Wendy neste momento quase foi atingida e se desequilibra e ameaça cair. Porém, Peter a segura,
+        fazendo com que os dois se apaixonem cada vez mais.<br><br>
+
+        Peter, Wendy e seus irmãos conseguem fugir e vão se esconder na casa dos meninos perdidos.
+        Eles moravam dentro de uma árvore oca e usavam roupas todas rasgadas. Se encantaram com Wendy e seu cheiro.
+        Wendy vendo que eles nunca tinha tido contato com uma menina, começou a contar lindas histórias para eles.<br><br>
+
+        Um belo dia, Capitão Gancho raptou a Princesa dos Índios. Todos se mobilizaram e Peter Pan a salvou do Capitão Gancho. 
+        O tempo passou e não satisfeito, o Capitão armou o plano de raptar desta vez os meninos perdidos e conseguiu! Os raptou 
+        e os levou para seu navio. Lá, ele os jogaria no mar para serem engolidos pelo crocodilo Tic Tac. Mas quando o pior iria 
+        acontecer, Peter Pan aparece e salva seus amigos. Ele luta valentemente contra o Capitão Gancho e vence a batalha.<br><br>
+
+        Wendy então pede para voltar com seus irmãos para sua casa, pois seus pais deveriam estar preocupados.
+        Peter Pan então os leva. Ao chegar na casa de Wendy, seus irmãos entram e ela fica para dar o último adeus a Peter Pan. 
+        Eles conversam e ela pergunta se ele não quer ficar ali com eles. Ele diz que não, pois a Terra do Nunca é a sua casa e
+        lá ele não cresceria e poderia viver para sempre como criança. Ele se despede de Wendy e voa.<br><br>
+
+        Ela o observa pela janela, o contemplando e pede bem baixinho que ele nunca deixe de olhar por ela.<br><br>
+
+
+     </strong> </p>
+    </div>
+</body>
+<script>
+  var ajudar = document.querySelector('#ajudar')
+  ajudar.addEventListener('click', Ajudar)
+  var texto = document.querySelector('#texto')
+  var paragrafos = texto.innerText
+  var c = 0
+  function Ajudar(){
+    texto.style.textTransform = 'uppercase'
+    c++
+    if(c==2){
+      texto.style.textTransform = ''
+      c=0
+    }
+  }
+</script>
+</html>
