@@ -1,8 +1,13 @@
+const express = require('express')
 const router = require('express').Router()
 const modelUser = require('../database/models/modelUser/user')
 const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken')
-const secret = "dawjd123"
+
+const path = process.cwd() 
+
+router.use(express.static(path));
+
+router.use(express.urlencoded({extended: true }))
 
 router.post('/authenticate', async (req, res) => {
     const { email, password } = req.body
@@ -10,6 +15,7 @@ router.post('/authenticate', async (req, res) => {
     const user = await modelUser.findOne({where: { email: email } })
 
     if(!user){
+        req.session.userid = null
         return res.send({ error: "User not found"})
 
     }
@@ -18,14 +24,13 @@ router.post('/authenticate', async (req, res) => {
         return res.send({ error: "Invalid password"})
     }
 
-    const token = jwt.sign({user: user.id_usuario}, secret, {expiresIn: 300})
-    user.senha = undefined;
+    //const token = jwt.sign({user: user.id_usuario}, secret, {expiresIn: 300})
+    user.senha = undefined; 
 
-    
-    res.send({ user: user, token: token })
+    req.session.userid = user.id_usuario
+
+    res.status(200).end()
 
 })
 
-
-
-module.exports = app => app.use('/auth', router)
+module.exports = router

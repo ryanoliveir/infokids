@@ -1,22 +1,36 @@
 const express = require('express')
-const database = require('./services/database/queries')
+
 const app = express()
-const authorization = require('./services/middlewares/auth_autorization')
-
-
-const dirname = __dirname
 
 
 
+const database = require('./services/database/queries')
+const session = require('./services/middlewares/config/session')
+
+
+
+const auth = require('./services/controllers/authController')
+const dashboard = require('./routes/dashboard')
+const leitura = require('./routes/leitura')
+
+
+
+
+
+app.use(session);
 app.use(express.json())
 app.use(express.urlencoded({extended: true }))
 
 
-
+const dirname = __dirname
 app.use(express.static(dirname + '/public'))
 
-require('./services/controllers/authController')(app)
-require('./services/controllers/registerController')(app)
+
+app.use('/auth', auth)
+app.use('/dashboard', dashboard)
+app.use('/dashboard/leitura', leitura)
+
+
 
 app.get('/login', function(req, res) {
     res.sendFile(dirname + '/public/pages/login_page/login.html')
@@ -28,10 +42,6 @@ app.get('/cadastro', function(req, res) {
 
 app.get('/home', function(req, res) {
     res.sendFile(dirname + '/public/pages/home_page/home.html')
-})
-
-app.get('/menu', authorization, function(req, res,){
-    res.sendFile(dirname + '/public/pages/menu_page/menu_page.html')
 })
 
 app.get('/leitura', function(req, res){
