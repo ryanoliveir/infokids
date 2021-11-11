@@ -11,27 +11,31 @@ router.get('/', (req, res) => {
 })
 
 router.get('/leitura1', (req, res) => {
-    res.send({message: 'pequena sereia'})
+    res.sendFile(path + '/public/pages/a_pequena_sereia_page/pequena_sereia_page.html')
+    //res.send({message: 'pequena sereia'})
 })
 
 router.get('/leitura2', (req, res) => {
-    res.send({message: 'branca de neve'})
+    res.sendFile(path + '/public/pages/branca_de_neve_page/branca_de_neve_page.html')
+    //res.send({message: 'branca de neve'})
 })
 
 router.get('/leitura3', (req, res) => {
-    res.send({message: 'chapeuzinho vermelho'})
+    res.sendFile(path + '/public/pages/chapeuzinho_vermelho_page/chapeuzinho_vermelho_page.html')
+    //res.send({message: 'chapeuzinho vermelho'})
 })
 
 router.get('/leitura4', (req, res) => {
-    res.send({message: 'cinderela'})
+    res.sendFile(path + '/public/pages/cinderela_page/cinderela_page.html')
+    //res.send({message: 'cinderela'})
 })
 
 router.get('/leitura5', (req, res) => {
-    res.send({message: 'tres mosqueteiros'})
+    res.sendFile(path + '/public/pages/o_magico_de_oz_page/o_magico_de_oz_page.html')
 })
 
 router.get('/leitura6', (req, res) => {
-    res.send({message: 'peter pan'})
+    res.sendFile(path + '/public/pages/peter_pan_page/peter_pan_page.html')
 })
 
 
