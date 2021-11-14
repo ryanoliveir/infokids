@@ -188,10 +188,10 @@ let sendToServer = (valores) =>{
 
   $.ajax({
     method: 'POST',
-    url: "/register/",
+    url: "/register",
     data: data
   }).done(function(data){
-    console.log(data);
+      location.href = 'http://localhost:3000/dashboard/menu'
   })
 
 
