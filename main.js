@@ -3,16 +3,16 @@ const express = require('express')
 const app = express()
 
 
-
 const database = require('./services/database/queries')
 const session = require('./services/middlewares/config/session')
 
 
 
 const auth = require('./services/controllers/authController')
+const registerUser = require('./services/controllers/registerController')
 const dashboard = require('./routes/dashboard')
 const leitura = require('./routes/leitura')
-
+const quizzes = require('./routes/quizzes')
 
 
 
@@ -27,8 +27,11 @@ app.use(express.static(dirname + '/public'))
 
 
 app.use('/auth', auth)
+app.use('/register', registerUser)
+
 app.use('/dashboard', dashboard)
 app.use('/dashboard/leitura', leitura)
+app.use('/dashboard/quizzes', quizzes)
 
 
 
@@ -42,10 +45,6 @@ app.get('/cadastro', function(req, res) {
 
 app.get('/home', function(req, res) {
     res.sendFile(dirname + '/public/pages/home_page/home.html')
-})
-
-app.get('/leitura', function(req, res){
-    res.sendFile(dirname + '/public/pages/leitura_page/leitura.html')
 })
 
 
