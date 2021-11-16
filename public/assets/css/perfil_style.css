@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mali&display=swap');
 body{
-    background-image: url('/assets/css/images/fundo_menu.png'); /*o fundo*/
+    background-image: url('/public/assets/css/images/fundo_menu.png'); /*o fundo*/
     background-attachment: fixed;
     background-size: 100% 100.70%; /*ajusta o fundo*/
     background-repeat: no-repeat; /*não deixa ele estampado*/
@@ -21,67 +22,66 @@ body{
     
 }
 .corpo{
-    background-color: #D6DAD7;
+    background-color: #05762b;
+    font-family: 'Mali', cursive;
     justify-content: center;
     align-items: center;
-    margin-top: 0px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
     border-radius: 10px;
+    padding-right: 70px;
+    padding-left:70px;
+    color: white;
+    
 }
-.linha1{
-    flex-direction: row;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.linha2{
-    flex-direction: row;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#quizzes,#leitura,#videos,#perfil,#alfabeto{
-width: 135px;
-height: 137px;
-margin: 20px;
-padding-right: 50px;
-padding-left: 50px;
-}
+
+
 h1{
     justify-content: center;
     align-items: center;
-    margin-bottom: -23px;
-    background-color: #D6DAD7;
-    font-size: 64px;
-    margin-right: -3%;
+    color:white;
+    margin-bottom: -110px;
+    background-color: #05762b;
+    font-size: 40px;
+    margin-right: -15%;
     border-radius: 10px;
     height: 60%;
     padding-right: 40px;
     padding-left:40px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Mali', cursive;
 }
+
+
 #logo{
+
     width: 173.5px;
     height: 126.5px;
 
 }
-.linha1 p,.linha2 p{
-    color: black;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0%;
-    text-decoration: none;
-}
+
 p{
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
+    font-size: 25px;
+    text-align: justify;
+    margin: 20px;
 }
 button{
+    background-color: #42FF00;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    border: none;
+    width: 190px;
+    cursor: pointer;
+    height: 45px;
+    border-radius: 20px;
+}
+#botoes{
+    justify-content:space-between;
+}
+#botao2{
     background-color: #FF994F;
     font-family: 'Roboto', sans-serif;
     font-size: 25px;
@@ -90,5 +90,6 @@ button{
     cursor: pointer;
     height: 45px;
     border-radius: 20px;
+    margin: 0%;
 }
 }

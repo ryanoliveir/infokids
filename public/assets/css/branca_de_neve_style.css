@@ -20,6 +20,20 @@ body{
     margin-right: 15px;
     
 }
+#botoes{
+    justify-content:space-between;
+}
+#botao2{
+    background-color: #FF994F;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    border: none;
+    width: 190px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 0%;
+}
 .corpo{
     padding-left: 40px;/*aplicar tal regra caso não gere um espaçamento*/
     padding-right: 40px;/*aplicar tal regra caso não gere um espaçamento*/
@@ -49,7 +63,7 @@ h1{
     margin-bottom: -102px;
     background-color: #D6DAD7;
     font-size: 35px;
-    margin-right: -3%;
+    margin-right: -15%;
     border-radius: 10px;
     height: 60%;
     padding-right: 40px;
@@ -77,6 +91,7 @@ button{
     border: none;
     width: 190px;
     height: 45px;
+    cursor: pointer;
     border-radius: 20px;
 }
 #mao{
