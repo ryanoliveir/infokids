@@ -5,7 +5,7 @@ body{
     background-attachment: fixed;
     background-size: 100% 100.70%; /*ajusta o fundo*/
     background-repeat: no-repeat; /*não deixa ele estampado*/
-    position:static; /*deixa fixo*/
+    position:fixed; /*deixa fixo*/
     margin: 0px;
     height: 100%; /*altura 100*/
     width: 100%; /*largura 100*/
@@ -69,6 +69,13 @@ h1{
     max-height: 400px;
     margin-left: 10px;
 }
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='000000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+   }
+   
+   .carousel-control-next-icon {
+     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='000000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+   }
 
 #logo{
 
