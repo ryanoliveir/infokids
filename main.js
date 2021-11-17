@@ -16,8 +16,8 @@ const leitura = require('./routes/leitura')
 const quizzes = require('./routes/quizzes')
 const perfil = require('./routes/pefil')
 const alfabeto = require('./routes/alfabeto')
-
-
+const vogais = require('./routes/vogais')
+const videos = require('./routes/videos')
 
 
 app.use(session);
@@ -39,7 +39,8 @@ app.use('/dashboard/leitura', leitura)
 app.use('/dashboard/quizzes', quizzes)
 app.use('/dashboard/perfil', perfil)
 app.use('/dashboard/alfabeto', alfabeto)
-
+app.use('/dashboard/vogais', vogais)
+app.use('/dashboard/videos', videos)
 
 app.get('/login', function(req, res) {
     res.sendFile(dirname + '/public/pages/login_page/login.html')
