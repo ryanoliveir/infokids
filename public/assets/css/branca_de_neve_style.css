@@ -34,6 +34,11 @@ body{
     border-radius: 20px;
     margin: 0%;
 }
+#botao2:hover{
+    background-color: #42FF00;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px black;
+}
 .corpo{
     padding-left: 40px;/*aplicar tal regra caso não gere um espaçamento*/
     padding-right: 40px;/*aplicar tal regra caso não gere um espaçamento*/
@@ -93,6 +98,11 @@ button{
     height: 45px;
     cursor: pointer;
     border-radius: 20px;
+}
+button:hover{
+    background-color: #ff9d00;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px black;
 }
 #mao{
     margin-top: 10px;
