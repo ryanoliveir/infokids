@@ -9,8 +9,13 @@ router.use(authMiddleware)
 router.use(express.urlencoded({extended: true }))
 
 
-router.use('/', (req, res) => {
+router.get('/', (req, res) => {
     res.sendFile(path + '/public/pages/atividades_page/quizzes.html')
+})
+
+router.get('/vogais', (req, res) => {
+    res.sendFile(path + '/public/pages/atividades_page/vogais_atividade_page/vogais_atividade_page.html')
+    
 })
 
 
