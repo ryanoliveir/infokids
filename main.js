@@ -15,6 +15,7 @@ const dashboard = require('./routes/dashboard')
 const leitura = require('./routes/leitura')
 const quizzes = require('./routes/quizzes')
 const perfil = require('./routes/pefil')
+const alfabeto = require('./routes/alfabeto')
 
 
 
@@ -37,7 +38,7 @@ app.use('/dashboard', dashboard)
 app.use('/dashboard/leitura', leitura)
 app.use('/dashboard/quizzes', quizzes)
 app.use('/dashboard/perfil', perfil)
-
+app.use('/dashboard/alfabeto', alfabeto)
 
 
 app.get('/login', function(req, res) {

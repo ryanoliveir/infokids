@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 body{
-    background-image: url('/public/assets/css/images/fundo_menu.png');
+    background-image: url('/assets/css/images/fundo_menu.png');
     background-attachment: fixed;
     background-size: 100% 100.70%;
     background-repeat: no-repeat;
