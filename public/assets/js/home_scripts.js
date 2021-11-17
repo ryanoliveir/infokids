@@ -14,8 +14,8 @@ function redirecionarCadastro(){
     location.href = 'http://localhost:3000/cadastro'
 }
 function Apoiadores(){
-    location.href = 'http://127.0.0.1:5500/public/pages/home_page/apoiadores_page/apoiadores_page.html'
+    location.href = 'http://localhost:3000/home/apoio'
 }
 function saberMais(){
-    location.href = 'http://127.0.0.1:5500/public/pages/home_page/saiba_mais_page/saiba_mais_page.html'
+    location.href = 'http://localhost:3000/home/saibamais'
 }

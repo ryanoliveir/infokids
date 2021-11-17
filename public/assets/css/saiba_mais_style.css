@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mali&display=swap');
 body{
-    background-image: url('/public/assets/css/images/fundo_home.png'); /*o fundo*/
+    background-image: url('/assets/css/images/fundo_home.png'); /*o fundo*/
     background-attachment: fixed;
     background-size: 100% 100.70%; /*ajusta o fundo*/
     background-repeat: no-repeat; /*não deixa ele estampado*/
