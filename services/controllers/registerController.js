@@ -21,18 +21,20 @@ router.post('/', async (req, res) => {
             senha: passHash,
         })
 
-
+        await database.sync();
+        const user = await Usuarios.findOne({where :{ email: email}})
         Aluno.create({
             nome: name,
             data_nascimento: nascimento,
             responsavel_nome: nome_responsavel,
             ano_escolar: ano_escolar,
             alfabetizado: alfabetizado[0],
+            usuario_credencial: user.id_usuario
         })
 
         await database.sync(); 
 
-        const user = await Usuarios.findOne({ where: { email: email } })
+        //const user = await Usuarios.findOne({ where: { email: email } })
         req.session.userid = user.id_usuario    
     }
 

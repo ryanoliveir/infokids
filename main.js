@@ -9,12 +9,15 @@ const session = require('./services/middlewares/config/session')
 
 
 const home = require('./routes/home')
+
 const auth = require('./services/controllers/authController')
 const registerUser = require('./services/controllers/registerController')
+const userInfo = require('./services/controllers/userController')
+
 const dashboard = require('./routes/dashboard')
 const leitura = require('./routes/leitura')
 const quizzes = require('./routes/quizzes')
-const perfil = require('./routes/pefil')
+const perfil = require('./routes/perfil')
 const alfabeto = require('./routes/alfabeto')
 const videos = require('./routes/videos')
 
@@ -32,6 +35,7 @@ app.use('/home', home)
 
 app.use('/auth', auth)
 app.use('/register', registerUser)
+app.use('/userinfo', userInfo)
 
 app.use('/dashboard', dashboard)
 app.use('/dashboard/leitura', leitura)

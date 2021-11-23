@@ -22,7 +22,11 @@ const Aluno = database.define("alunos",{
     },
     alfabetizado: {
         type: Sequelize.ENUM('S','N')
+    },
+    usuario_credencial:{
+        type: Sequelize.INTEGER,
     }
+
 }, {
     tableName: 'alunos'
 }
