@@ -124,4 +124,7 @@ p{
   #esqueceu:hover{
     text-shadow: 0.1em 0.1em 0.2em black /*sombrinha preta*/
   }
+  #ativado{
+      color: red;
+  }
 

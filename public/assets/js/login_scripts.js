@@ -23,11 +23,17 @@ const sendToServer = async (email, password) => {
     }else if (status.code == 401) {
         if(status.error == 'user'){
             console.log("User not found");
-            alert('O e-mail não está cadastrado/não existe!')
+            let form = document.querySelector('form')
+            var ativado = document.querySelector('#ativado')
+            ativado.innerHTML = 'Dados inválidos'
+            form.after(ativado)
             //CRIAR MENSAGEM NA TELA DE LOGIN DE ERRO DE CREDENCIAL
         }else if(status.error == 'password'){
             console.log("Password incorret");
-            alert('A senha não está cadastrada/não existe!')
+            let form = document.querySelector('form')
+            var ativado = document.querySelector('#ativado')
+            ativado.innerHTML = 'Dados inválidos'
+            form.after(ativado)
             //CRIAR MENSAGEM NA TELA DE LOGIN DE ERRO DE CREDENCIAL
         }
     }
