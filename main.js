@@ -56,6 +56,9 @@ app.get('/home', function(req, res) {
     res.sendFile(dirname + '/public/pages/home_page/home.html')
 })
 
+app.get('/', function(req, res) {
+    res.redirect('/home')
+})
 
 
 app.get('/db', database.connetionVerify)
