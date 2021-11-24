@@ -8,6 +8,7 @@ const path = process.cwd()
 router.use(express.static(path));
 
 router.use(express.urlencoded({extended: true }))
+router.use(express.json());
 
 router.post('/authenticate', async (req, res) => {
     const { email, password } = req.body
@@ -16,20 +17,20 @@ router.post('/authenticate', async (req, res) => {
 
     if(!user){
         req.session.userid = null
-        return res.send({ error: "User not found"})
+        return res.json({code: 401, error: "user"})
 
     }
 
     if(!await bcrypt.compare(password, user.senha)){
-        return res.send({ error: "Invalid password"})
+        return res.json({code: 401, error: "password"})
     }
 
-    //const token = jwt.sign({user: user.id_usuario}, secret, {expiresIn: 300})
+
     user.senha = undefined; 
 
     req.session.userid = user.id_usuario
 
-    res.status(200).end()
+    res.json({code: 200})
 
 })
 

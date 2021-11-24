@@ -6,22 +6,30 @@ body.append(lista)
 // let arrayEmail = ['mikapetronilho@gmail.com','juliarodrigues@gmail.com']
 // let arraySenha = ['mikita@2003','julita@2002']
 
-let sendToServer = (email, pass) => {
+const sendToServer = async (email, password) => {
     //const send = {"email": email, "password": pass}
-
-    $.ajax({
+    const data = {email, password}
+    const options = {
         method: 'POST',
-        url: "/auth/authenticate",
-        data: {
-            email: email,
-            password: pass,
-        },
-        
-        }).done(function(data) {
-            location.href = 'http://localhost:3000/dashboard/menu'
-        
-            
-    });   
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+    }
+
+    const response = await fetch('/auth/authenticate', options);
+    const status = await response.json()
+    
+    if(status.code == 200){
+        location.href = 'http://localhost:3000/dashboard/menu'
+    }else if (status.code == 401) {
+        if(status.error == 'user'){
+            console.log("User not found");
+            //CRIAR MENSAGEM NA TELA DE LOGIN DE ERRO DE CREDENCIAL
+        }else if(status.error == 'password'){
+            console.log("Password incorret");
+            //CRIAR MENSAGEM NA TELA DE LOGIN DE ERRO DE CREDENCIAL
+        }
+    }
+   
 }
 
 function Enviar(){
