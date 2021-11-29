@@ -27,6 +27,12 @@ const showdata = async (user) =>{
     const ano = document.querySelector('#user4')
     //const nasc = document.querySelector('#user5')
     const alfabetizado = document.querySelector('#user6')
+
+    if(user.alfabetizado == "S"){
+        var alfabetizado_check = "Sim"
+    }else{
+        var alfabetizado_check = "Não"
+    }
     
 
     nome.innerText += ` ${user.nome}`
@@ -34,7 +40,7 @@ const showdata = async (user) =>{
     responsavel.innerText += ` ${user.nome_responsavel}`
     ano.innerText += ` ${user.ano_escolar}`
     //nasc.innerText += ` ${dataString(user.nascimento)}`
-    alfabetizado.innerText += ` ${user.alfabetizado}`
+    alfabetizado.innerText += ` ${alfabetizado_check}`
 }
 
 getdata();
