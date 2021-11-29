@@ -43,6 +43,7 @@ body{
 }
 .cabecalho{
     display: flex;
+    margin-top: 10px;
     flex-direction: row;
     align-items: center;
     
